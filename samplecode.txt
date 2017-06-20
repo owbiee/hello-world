@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang ="en-US">
+<head>
+	<title>tutorial</title>
+	<meta charset ="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel ="stylesheet" href ="style.css" type ="text/css"/>
+</head>
+<body>
+<ul id =navbar>
+<li><a href ="#">Resume</a></li>
+<li><a href ="#">Contact</a></li>
+<li><a href ="#">About</a></li>
+</ul>
+<h3 id="time" style="color: #212F3C; float: right; font-family: cursive;"></h3><br/><br/><br/><br/>
+<img src="user.png" style="border-radius: 10px; margin-left: 470px;"/>
+<h3 style="text-align: center; font-family: cursive;">User Login</h3>
+<div style = "background-color: #A3E4D7; text-align: center; height: 200px; margin-top: 150px; margin-left: 150px; margin-right: 150px; padding-top: 100px; margin-bottom: 150px; border-radius: 10px;
+">
+<!--TextBox-->
+<img src="user.png" height="30px" width="30px" style="border-radius: 10px;"/>
+	<input id = "uname" type="text" placeholder="username" style="height: 20px; width: 250px; border-top: hidden; border-right: hidden; border-left: hidden; background-color: #A3E4D7; border-bottom-color: #1A5276; "/><br/><br/>
+<img src="pwd.jpg" width="30px" height="30px" style="border-radius: 10px;"/>
+	<input id = "pwd" type="password" placeholder="password" style="height: 20px; width: 250px; border-top: hidden; border-right: hidden; border-left: hidden; background-color: #A3E4D7; border-bottom-color: #1A5276;"/><br/><br/>
+	<button id ="btn" onclick = "signIn()" style ="height: 30px; width: 250px; border-radius: 15px; color: white; background-color:#1A5276;">Log In</button><br/><br/>
+	<p id ="msg" style="color: #E74C3C;"></p>
+</div>
+<!--Javascript-->
+<script>
+var time = setInterval(myTimer, 1000);
+//Timer Function
+function myTimer(){
+	var d = new Date();
+	document.getElementById("time").innerHTML = d.toLocaleTimeString();
+}
+//Sign In function
+function signIn(){
+var x = document.getElementById("uname").value;
+var y = document.getElementById("pwd").value;
+
+if (x == "" && y == ""){
+document.getElementById("msg").innerHTML = "Enter Username and Password";
+
+}
+
+
+}
+</script>
+</body>
+</html>
